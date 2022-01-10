@@ -1,0 +1,10 @@
+<div class="container" [ngClass]="{ isResizing: isResizing$ | async }">
+  <canvas class="canvas" #canvas></canvas>
+</div>
+test
+
+<three-resize
+  class="resize"
+  (isResizing)="isResizing$.next($event)"
+  [mainScene]="mainScene"
+></three-resize>
